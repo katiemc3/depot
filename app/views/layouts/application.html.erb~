@@ -19,7 +19,7 @@
       <a href="http://www..../faq">Questions</a><br />
       <a href="http://www..../news">News</a><br />
       <a href="http://www..../contact">Contact</a><br />
-     <a> <%= DateTime.now.strftime("%d/%m/%Y, %H:%M:%S") %> </a>
+      <%= DateTime.now.strftime("%d/%m/%Y, %H:%M:%S") %>
     </div>
     <div id="main">
       <%= yield %>
