@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+	<%= item.quantity %> &times;
   <div class="actions">
     <%= f.submit %>
   </div>
