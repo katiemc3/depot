@@ -2,7 +2,11 @@
 <ul>    
   <% @cart.line_items.each do |item| %>
     <li><%= item.product.title %></li>
+    <%= render @cart %>
     <%= item.quantity %> &times;
-    <%= button_to 'Empty @cart', cart, :method=>:delete, :confirm=>'Are you sure?' %>
+    <%= button_to 'Empty @cart',
+      <%= button_to 'Add to Cart', line_items_path(:product_id => product),
+    :remote => true %>
+ cart, :method=>:delete, :confirm=>'Are you sure?' %>
   <% end %>
 </ul>

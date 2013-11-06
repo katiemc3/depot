@@ -10,7 +10,8 @@
   </tr>
 
 <% @line_items.each do |line_item| %>
-
+  <%= button_to 'Add to Cart', line_items_path(:product_id => product),
+    :remote => true %>
   <tr>
     <td><%= line_item.product_id %></td>
     <td><%= line_item.cart_id %></td>

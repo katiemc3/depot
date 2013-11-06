@@ -7,7 +7,7 @@
     <th></th>
   </tr>
 
-<%= render cart.line_items %>
+<% @carts.each do |cart| %>
   <tr>
     <td><%= link_to 'Show', cart %></td>
     <td><%= link_to 'Edit', edit_cart_path(cart) %></td>

@@ -19,6 +19,11 @@
       <a href="http://www..../news">News</a><br />
       <a href="http://www..../contact">Contact</a><br />
      <a> <%= DateTime.now.strftime("%d/%m/%Y, %H:%M:%S") %> </a>
+       <div id="cart">
+    <%= render @cart %>
+      <%= button_to 'Add to Cart', line_items_path(:product_id => product),
+    :remote => true %>
+  </div>
     </div>
     <div id="main">
       <%= yield %>

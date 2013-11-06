@@ -1,0 +1,9 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+
+page.replace_html('cart', render(@cart))
+format.js { @current_item = @line_item }
+page[:current_item].visual_effect :highlight, 
+                                  :start_color => "#88ff88",
+                                  :endcolor => "#114411"
