@@ -53,6 +53,7 @@ class OrdersController < ApplicationController
 	session[:cart_id] = nil
 	format.html { redirect_to(store_url, :notice => 'Thank you for 		your order.') }
        format.json { render :json => @order, :status => :created, :location => @order }
+	Notifier.order_received(@order).deliver
       else
         format.html { render :action => "new" }
         format.json { render :json => @order.errors, :status => :unprocessable_entity }
