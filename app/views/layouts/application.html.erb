@@ -2,21 +2,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pragprog Books Online Store</title>
+  <title>News Online</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tag %>
 </head>
 <body id="store">
   <div id="banner">
-    <%= image_tag("logo.png") %>
-    <%= @page_title || "Welcome to Pragmatic Bookshelf" %>
+    <%= @page_title || "Welcome to News Online" %>
   </div>
   <div id="columns">
     <div id="side">
       <a href="http://www....">Home</a><br />
       <a href="http://www..../faq">Questions</a><br />
-      <a href="http://www..../news">News</a><br />
+      <a href="http://www..../news">News for "News Online"</a><br />
       <a href="http://www..../contact">Contact</a><br />
      <a> <%= DateTime.now.strftime("%d/%m/%Y, %H:%M:%S") %> </a>
        <div id="cart">
